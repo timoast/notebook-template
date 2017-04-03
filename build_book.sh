@@ -24,8 +24,8 @@ BASENAME=(${RMDFILE//.Rmd/})
 Rscript -e "bookdown::preview_chapter('${RMDFILE}')"
 
 # copy the markdown file and associated files over to other dir
-cp _book/${BASENAME}.md ~/Dropbox/notebook_render/${BASENAME}.Rmd
-cp -r _bookdown_files/${BASENAME}_files ~/Dropbox/notebook_render/_bookdown_files
+cp _book/${BASENAME}.md ./render_dir/${BASENAME}.Rmd
+cp -r _bookdown_files/${BASENAME}_files ./render_dir/_bookdown_files
 
 # build book
 cd ./render_dir/
