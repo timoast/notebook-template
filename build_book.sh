@@ -28,12 +28,11 @@ cp _book/${BASENAME}.md ~/Dropbox/notebook_render/${BASENAME}.Rmd
 cp -r _bookdown_files/${BASENAME}_files ~/Dropbox/notebook_render/_bookdown_files
 
 # build book
-cd ~/Dropbox/notebook_render  # set this wherever you want
+cd ./render_dir/
 Rscript -e "bookdown::render_book('index.Rmd')"
 open -a "Safari" _book/index.html
 
 # upload to aws
 if [ $amazon == true ]; then
-    source ~/.virtualenvs/env/bin/activate
     aws s3 sync _book/ s3://[bucket name] # set bucket name
 fi
