@@ -1,0 +1,34 @@
+--- 
+title: "Lab notebook"
+author: ""
+date: "`r format(Sys.Date(), '%Y')`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [ref.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: timoast/notebook-template
+description: "Computational lab notebook"
+---
+
+# Welcome
+
+This book is a collection of Rmarkdown documents that contain data analyses I have done in day-to-day work. The book is written using [bookdown](https://bookdown.org/), and there is a very useful bookdown reference book [here](https://bookdown.org/yihui/bookdown/).
+
+## Getting started
+
+Many different R packages are used in this book, if you would like to install some of them run:
+
+```{r packages, eval=FALSE}
+install.packages(c("dplyr", "ggplot2", "readr", "data.table",
+                   "shiny", "plotly", "bookdown", "RColorBrewer",
+                   "d3heatmap", "devtools", "ggvis", "tidyr"))
+```
+
+[Bioconductor](www.bioconductor.org) is also very useful.
+
+```{r bioc, eval=FALSE}
+source("http://bioconductor.org/biocLite.R")
+biocLite()
+```

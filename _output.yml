@@ -1,0 +1,13 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><strong><a href="./">Lab notebook</a></strong></li>
+    edit:
+      link: https://github.com/timoast/notebook-template/edit/master/%s
+      text: "Edit"
+    search: yes
+    sharing: no
+  df_print: paged
+  max.print: 10
